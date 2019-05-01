@@ -1,0 +1,9 @@
+
+public class AccountPolicies {
+
+	public static void disableBIAccounts() throws IOException
+	{
+		Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"\"");
+	}
+	
+}

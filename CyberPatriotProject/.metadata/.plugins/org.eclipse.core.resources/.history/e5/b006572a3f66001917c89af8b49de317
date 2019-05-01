@@ -1,0 +1,9 @@
+
+public class AccountPolicies {
+
+	public static void disableBIAccounts() throws IOException
+	{
+		
+	}
+	
+}

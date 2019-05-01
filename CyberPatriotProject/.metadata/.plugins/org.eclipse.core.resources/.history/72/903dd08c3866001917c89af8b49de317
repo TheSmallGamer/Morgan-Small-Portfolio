@@ -1,0 +1,71 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+import java.util.logging.Level;
+
+import com.sun.istack.internal.logging.Logger;
+
+import jdk.nashorn.tools.Shell;
+
+public class Passwords 
+{
+	public static void setPasswordPolicies() throws IOException
+	{
+		
+		//String Arr[] = {"cmd", "/c", "start", "G:\\My Drive\\Eclipse Workspace 2018-2019\\CyberPatriot Windows Script\\resources\\Password Policies.bat"};
+		//sendShellCommand(Arr);
+		
+		Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"\"C:\\Users\\jamie\\OneDrive\\Desktop\\CyberPatriotProject\\CyberPatriot Windows Script\\resources\\PasswordPolicies.bat\"\"");
+		
+		
+		
+	}
+	
+	public static String sendShellCommand(String[] cmd) {
+		System.out.println("\n###executing: " + cmd[0] + "###");
+		String AllText = "Command Not Executed";
+		try {
+			String line;
+			Process process = new ProcessBuilder(cmd).start();
+			BufferedReader STDOUT = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			BufferedReader STDERR = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+			while((line = STDOUT.readLine()) != null)
+			{
+				AllText = AllText + "\n" + line;
+				while((line = STDERR.readLine()) != null)
+				{
+					AllText = AllText + "\n" + line;
+				}
+			}
+			System.out.println("Response from command \"" + cmd[0] + "\":" + AllText);
+			return AllText;
+		}catch (IOException ex)
+		{
+			Logger.getLogger(Shell.class.getName(), null).log(Level.SEVERE, null, ex);
+		}
+		return AllText;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

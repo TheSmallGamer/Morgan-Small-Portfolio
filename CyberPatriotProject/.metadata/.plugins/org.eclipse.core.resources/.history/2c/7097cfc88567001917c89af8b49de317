@@ -1,0 +1,8 @@
+
+public class Miscellaneous {
+
+	public static void disableServices() throws IOException{
+		Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"CHANGE\"");
+	}
+	
+}

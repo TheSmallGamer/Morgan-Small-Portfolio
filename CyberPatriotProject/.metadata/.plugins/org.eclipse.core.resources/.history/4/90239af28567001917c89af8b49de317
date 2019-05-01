@@ -1,0 +1,9 @@
+import java.io.IOException;
+
+public class Miscellaneous {
+
+	public static void disableServices() throws IOException{
+		Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"/CyberPatriot Windows Script/src/resources/Unnecessary Services.bat\"");
+	}
+	
+}
