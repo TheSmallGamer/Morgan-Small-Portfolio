@@ -15,7 +15,7 @@
 ### Wahoot.it
    This was a fun class project created by the 2018-2019 senior class in computer science. This program closely mimics the game Kahoot.it, the online testing website that teachers use to teach their students while also keeping their students entertained. While not fully complete, this backend gives the user a fun experience while learning things about certain programmable subjects
    
-### Cyber Patriots Private Project **CyberKey**
+### Cyber Patriots Private Project -- *CyberKey*
    As one of the most important projects of his life, CyberKey is Morgan's gift to the TX861st AFJROTC CyberPatriot teams. This program, while still under development, automizes many aspects of the team's competition so they are able to complete many items faster and accurately, using batch files embedded within the file
    
 
